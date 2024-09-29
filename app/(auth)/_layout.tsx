@@ -1,10 +1,16 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Stack } from 'expo-router'
 
 const AuthLayout = () => {
+
+    const [isSigningIn, setIsSigningIn] = useState(false);
  
-    return <Stack></Stack>;
+    return <Stack>
+        <Stack.Screen name='sing-in' options={{
+            headerShown:false
+        }}/>
+    </Stack>;
 
 }
 

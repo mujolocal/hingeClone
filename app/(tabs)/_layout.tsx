@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React, { useEffect } from 'react'
-import { SplashScreen, Tabs } from 'expo-router'
+import { Redirect, SplashScreen, Tabs } from 'expo-router'
 import { useFonts } from 'expo-font';
 import { fonts } from '@/constants/fonts';
 import { colors } from '@/constants/colors';
@@ -9,6 +9,7 @@ import { HeartIcon, HingeIcon, MessageIcon, PersonIcon, StarIcon } from '@/const
 
 
 const AppLayout = () => {
+  return <Redirect href="/(auth)/sign-in"/>
   return (
     <Tabs screenOptions={
       ({route})=>({
